@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl -Tw
+#! /usr/bin/perl
 
 use strict;
 use CGI;
@@ -10,6 +10,6 @@ my($color) = "blue";
 $color = $cgi->param('color') if defined $cgi->param('color');
 
 print $cgi->start_html(-title => uc($color),
-                       -BGCOLOR => $color);
+                       -bgcolor => $color);
 print $cgi->h1("This is $color");
 print $cgi->end_html;

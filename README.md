@@ -43,3 +43,53 @@ A mirror for tinyhttpd
 <p>&nbsp; &nbsp; （10） 关闭与浏览器的连接，完成了一次 HTTP 请求与回应，因为 HTTP 是无连接的。</p>
 <p><br>
 </p>
+
+
+
+## 通过浏览器发送的HTTP协议，在客户端解析后，内容为如下
+    
+    // mac
+    1   =    GET / HTTP/1.1   # http 协议的头 和 版本
+    2   =    Host: 127.0.0.1:4000   # uri + 参数
+    3   =    Connection: keep-alive
+    4   =    Cache-Control: max-age=0
+    5   =    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    6   =    Upgrade-Insecure-Requests: 1
+    7   =    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 
+             (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36
+    8   =    Accept-Encoding: gzip, deflate, sdch
+    9   =    Accept-Language: en-US,en;q=0.8,pl;q=0.6,zh-CN;q=0.4,zh-TW;q=0.2
+    10  =    Cookie: fingerprint=1812449954; Hm_lvt_fffba4526d43301ecb10cceaf968f17d=1461311792,
+             1461385784; __utma=96992031.1250987093.1462978767.1463032714.1463037970.6;
+             __utmz=96992031.1462978767.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+    11  =
+
+    // 手机端
+    1  =  GET / HTTP/1.1
+    2  =  Host: 192.168.1.101:4000
+    3  =  Connection: keep-alive
+    4  =  Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    5  =  Upgrade-Insecure-Requests: 1
+    6  =  User-Agent: Mozilla/5.0 (Linux; U; Android 6.0.1; zh-cn; MI 4LTE Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/46.0.2490.85 Mobile Safari/537.36 XiaoMi/MiuiBrowser/2.1.1
+    7  =  x-miorigin: un
+    8  =  Accept-Encoding: gzip, deflate
+    9  =  Accept-Language: zh-CN,en-US;q=0.8
+    10 = 
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
